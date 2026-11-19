@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecionando…</title>
+  <meta name="robots" content="noindex">
+  <script>
+    /* GitHub Pages: endereços "bonitos" como /games ou /c/codigo não existem como arquivo.
+       Esta página transforma em ?p=games ou ?c=codigo e volta para a página principal. */
+    var BASE_FIXA = null; // troque para "/" se o site estiver na raiz (repositório usuario.github.io ou domínio próprio)
+    (function () {
+      var partes = location.pathname.split("/").filter(Boolean);
+      var base;
+      if (BASE_FIXA) { base = BASE_FIXA; partes = partes.slice(BASE_FIXA.split("/").filter(Boolean).length); }
+      else if (/\.github\.io$/i.test(location.hostname) && partes.length) base = "/" + partes.shift() + "/";
+      else base = "/";
+      var q = location.search ? location.search.slice(1) + "&" : "", destino = base;
+      if (partes[0] === "c" && partes[1]) destino = base + "?" + q + "c=" + encodeURIComponent(partes[1]);
+      else if (partes[0] === "admin") destino = base + "admin/";
+      else if (partes[0]) destino = base + "?" + q + "p=" + encodeURIComponent(partes[0].toLowerCase());
+      location.replace(destino + location.hash);
+    })();
+  </script>
+</head>
+<body style="background:#0b0a1a;color:#fff;font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0">
+  <p>Abrindo…</p>
+</body>
+</html>

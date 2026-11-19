@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Minhas redes</title>
+  <meta name="description" content="Todas as minhas redes sociais e links oficiais.">
+  <meta property="og:title" content="Minhas redes">
+  <meta property="og:description" content="Todas as minhas redes sociais e links oficiais.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b0a1a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="fonte-css" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body data-tema="aurora" data-formato="arredondado" data-estilo="vidro" data-anim="subir" data-avatar="circulo">
+  <div class="fundo" id="fundo" aria-hidden="true"><span class="fundo-img" id="fundo-img"></span><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="grao"></span></div>
+
+  <main class="pagina" id="pagina">
+    <button class="btn-compartilhar" id="compartilhar" type="button" aria-label="Compartilhar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></g></svg>
+      <span id="txt-compartilhar">Compartilhar</span>
+    </button>
+
+    <header class="perfil">
+      <div class="avatar-anel"><div class="avatar" id="avatar"></div></div>
+      <h1 id="nome"><span id="nome-txt"></span><svg id="selo" class="selo" viewBox="0 0 24 24" aria-label="Verificado"><path fill="currentColor" d="M22.5 12c0-1.4-.8-2.6-1.9-3.2.4-1.2.1-2.6-.8-3.5s-2.3-1.2-3.5-.8C15.6 3.3 14.4 2.5 13 2.5h-2c-1.4 0-2.6.8-3.2 1.9-1.2-.4-2.6-.1-3.5.8s-1.2 2.3-.8 3.5C2.3 9.4 1.5 10.6 1.5 12s.8 2.6 1.9 3.2c-.4 1.2-.1 2.6.8 3.5s2.3 1.2 3.5.8c.6 1.2 1.8 1.9 3.2 1.9h2c1.4 0 2.6-.8 3.2-1.9 1.2.4 2.6.1 3.5-.8s1.2-2.3.8-3.5c1.2-.6 1.9-1.8 1.9-3.2zm-12 4.6-4-4 1.4-1.4 2.6 2.6 6-6 1.4 1.4-7.4 7.4z"/></svg></h1>
+      <p class="usuario" id="usuario"></p>
+      <p class="bio" id="bio"></p>
+    </header>
+
+    <section class="redes" aria-labelledby="titulo-redes">
+      <h2 class="sr-only" id="titulo-redes">Redes sociais</h2>
+      <ul class="icones" id="icones"></ul>
+    </section>
+
+    <section class="links" aria-labelledby="titulo-links">
+      <h2 class="secao-titulo" id="titulo-links">Links em destaque</h2>
+      <ul class="lista" id="lista"></ul>
+    </section>
+
+    <footer class="rodape" id="rodape"></footer>
+  </main>
+
+  <div class="aviso" id="aviso" role="dialog" aria-live="polite" aria-labelledby="aviso-titulo" hidden>
+    <div class="aviso-cartao">
+      <div class="aviso-icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g></svg>
+      </div>
+      <div class="aviso-texto">
+        <strong id="aviso-titulo">Sua privacidade</strong>
+        <p id="aviso-texto"></p>
+      </div>
+      <div class="aviso-acoes">
+        <button type="button" class="b-sec" id="recusar">Só o essencial</button>
+        <button type="button" class="b-pri" id="aceitar">Aceitar</button>
+      </div>
+      <button type="button" class="b-local" id="localizacao" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g></svg>
+        <span id="txt-localizacao">Compartilhar localização (opcional)</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js?v=1"></script>
+  <script src="js/icones.js?v=1"></script>
+  <script src="js/coleta.js?v=1" defer></script>
+</body>
+</html>
